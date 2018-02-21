@@ -39,9 +39,9 @@ $(window).bind("load", function() {
                if ( ($(document.body).height()+footerHeight) < $(window).height()) {
                    $footer.css({
                         position: "absolute"
-                   }).animate({
+                   })/**.animate({
                         top: footerTop
-                   })
+                   })**/
                } else {
                    $footer.css({
                         position: "static"
@@ -51,7 +51,7 @@ $(window).bind("load", function() {
        }
 
        $(window)
-               /**.scroll(positionFooter)**/
+               scroll(positionFooter)
                .resize(positionFooter)
                
 });
