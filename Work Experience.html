@@ -22,7 +22,10 @@ function myFunction() {
 
 </script>
 <script type="text/javascript">
-
+$(window).load(function(){
+	var windowHeight = $(window).height;
+	alert(windowHeight);
+})
 
 
 </script>
@@ -122,7 +125,7 @@ body {
 
 <style>
 .footer {
-    position: fixed; /**Changed from inherit **/
+    position: inherit;
     left: 0px;
     bottom: 0px;
     width: 100%;
