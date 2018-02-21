@@ -1,7 +1,63 @@
 <!-- Code adapted from https://www.w3schools.com/howto/howto_js_topnav_responsive.asp -->
 <!DOCTYPE html>
 <html>
+<head>
 <title>Tucker Mogren's Personal Website</title>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script> 
+<script type="text/javascript">
+
+function myFunction() {
+    var x = document.getElementById("myTopnav");
+    if (x.className === "topnav") {
+        x.className += " responsive";
+    } else {
+        x.className = "topnav";
+    }
+}
+
+
+
+
+
+
+</script>
+<script type="text/javascript">
+// Window load event used just in case window height is dependant upon images
+$(window).bind("load", function() { 
+       
+       var footerHeight = 0,
+           footerTop = 0,
+           $footer = $("#footer");
+           
+       positionFooter();
+       
+       function positionFooter() {
+       
+                footerHeight = $footer.height();
+                footerTop = ($(window).scrollTop()+$(window).height()-footerHeight)+"px";
+       
+               if ( ($(document.body).height()+footerHeight) < $(window).height()) {
+                   $footer.css({
+                        position: "absolute"
+                   }).animate({
+                        top: footerTop
+                   })
+               } else {
+                   $footer.css({
+                        position: "static"
+                   })
+               }
+               
+       }
+
+       $(window)
+               .scroll(positionFooter)
+               .resize(positionFooter)
+               
+});
+
+
+</script>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
@@ -9,6 +65,8 @@
 <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto">
 <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
 <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
 <style>
 body {
   margin: 0;
@@ -92,16 +150,7 @@ body {
       <p align="left"> Ran day-to-day operations when the manager was out of the office. Assured that the office ran smoothly and that all systems were operating as needed. Managed a team of on-staff ticket sellers and assisted them on an as-needed basis. Dealt with customer service issues as they arose and made sure the company electronic sign, social media pages, and websites were kept up-to-date as our schedule changed as the day went on.    </p>
 </div> 
 
-<script>
-function myFunction() {
-    var x = document.getElementById("myTopnav");
-    if (x.className === "topnav") {
-        x.className += " responsive";
-    } else {
-        x.className = "topnav";
-    }
-}
-</script>
+
 
 <style>
 .footer {
