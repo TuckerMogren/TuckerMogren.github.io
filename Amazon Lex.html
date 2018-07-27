@@ -79,9 +79,20 @@ body {
   <a href="javascript:void(0);" style="font-size:15px;" class="icon" onclick="myFunction()">&#9776;</a>
 </div>
   <div style="padding-left:16px">
-    <!-- code will go here --> 
+   
+  <script src="https://lex-web-ui-codebuilddeploy-il1kxcmm9-webappbucket-1xvucrn4sz87x.s3.amazonaws.com/lex-web-ui-loader.min.js"></script>
+  <script>
+  var loaderOpts = {
+    baseUrl: 'https://lex-web-ui-codebuilddeploy-il1kxcmm9-webappbucket-1xvucrn4sz87x.s3.amazonaws.com/'
+  };
+  var loader = new ChatBotUiLoader.IframeLoader(loaderOpts);
+  loader.load()
+    .catch(function (error) { console.error(error); });
+  </script>
+   
 
-    <p></p>
+
+  <p></p>
   </div> 
 
 <script>
