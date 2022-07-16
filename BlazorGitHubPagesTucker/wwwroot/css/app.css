@@ -1,5 +1,36 @@
 ﻿@import url('open-iconic/font/css/open-iconic-bootstrap.min.css');
 
+/* CSS formatting created by Tucker*/
+
+html, body, #app{
+    height: 100vh;
+    max-height: 100vh;
+}
+
+.roundImage{
+    border-radius: 100%;
+    width: 400px;
+}
+
+.fontSize25AndBlack{
+    font-size: 25pt;
+    color: black;    
+}
+.center{
+    text-align: center;
+    margin: auto;
+    width: 100%;
+    border: 0px;
+}
+
+.footer
+{
+    position: fixed;
+    bottom: 0;
+    width: 100%;
+    background-color: red;
+}
+/* Auto created CSS from when the blazor app was created */
 html, body {
     font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif;
 }
