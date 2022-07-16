@@ -79,6 +79,26 @@ main[b-lvn1bol0ua] {
         padding-left: 2rem !important;
         padding-right: 1.5rem !important;
     }
+
+    .main > footer[b-lvn1bol0ua] {
+        height: 3rem;
+        max-height: 3rem;
+    }
+    .main > .content[b-lvn1bol0ua] {
+        height: calc(100vh - 6.5rem);
+        max-height: calc(100vh - 6.5rem);
+        overflow-y: auto;
+    }
+
+    @media (min-width: 641px) {
+            .sidebar[b-lvn1bol0ua] {
+                max-height: 100vh;
+                overflow-y: auto;
+
+    }
+
+    }
+
 }
 /* /Shared/NavMenu.razor.rz.scp.css */
 .navbar-toggler[b-d8adtf9hgd] {
@@ -130,7 +150,7 @@ main[b-lvn1bol0ua] {
 
 .nav-item[b-d8adtf9hgd]  a:hover {
     background-color: rgba(255,255,255,0.1);
-    color: white;
+    color: rgb(255, 255, 255);
 }
 
 @media (min-width: 641px) {
