@@ -3,7 +3,7 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.5.002.0
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorGitHubPagesTucker", "BlazorGitHubPagesTucker\BlazorGitHubPagesTucker.csproj", "{D55D8A93-64E7-4491-B32D-D49541F66163}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BlazorGitHubPagesTucker", "BlazorGitHubPagesTucker\BlazorGitHubPagesTucker.csproj", "{A9879797-5C7F-4E29-ABA6-E59EC90DA948}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -11,10 +11,10 @@ Global
 		Release|Any CPU = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(ProjectConfigurationPlatforms) = postSolution
-		{D55D8A93-64E7-4491-B32D-D49541F66163}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{D55D8A93-64E7-4491-B32D-D49541F66163}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{D55D8A93-64E7-4491-B32D-D49541F66163}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{D55D8A93-64E7-4491-B32D-D49541F66163}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A9879797-5C7F-4E29-ABA6-E59EC90DA948}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A9879797-5C7F-4E29-ABA6-E59EC90DA948}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A9879797-5C7F-4E29-ABA6-E59EC90DA948}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A9879797-5C7F-4E29-ABA6-E59EC90DA948}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
