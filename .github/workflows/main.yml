@@ -3,7 +3,7 @@ name: Deploying Blazor WebAssembly to GitHub Pages
 # Run workflow on every push to the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ] # I dont wanna deal with two merges...
     
 jobs:
   deploy-to-github-pages:
