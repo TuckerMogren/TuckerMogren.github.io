@@ -1,7 +1,7 @@
 {
   "mainAssemblyName": "BlazorGitHubPagesTucker",
   "resources": {
-    "hash": "sha256-m/ydGxNkN6XSDE6GE2Yn6sFJItUe6TqNqZ79NGQ6soc=",
+    "hash": "sha256-HiMsQ2Gozuf3TfXGnKmKLst1oJNVNWu9jwboz0qD4c8=",
     "jsModuleNative": {
       "dotnet.native.js": "sha256-vtotCeXt2UD6oc459laJT32vBgigZ+eLoUmdeFkvYDk="
     },
@@ -47,7 +47,7 @@
       "System.Text.Json.wasm": "sha256-TuEJeuPIhQJXCbvQhynsX1RGIvn8YsWg1zTGIINV+Mo=",
       "System.Text.RegularExpressions.wasm": "sha256-N5iEwt2bfvrglh1Ef1pkKFXQo82wOkhE64+4FGK7Ru8=",
       "System.Private.CoreLib.wasm": "sha256-kN4NTiaoA8oDh+FX0WhGyAkeYja69paOc2pmEKiqY7M=",
-      "BlazorGitHubPagesTucker.wasm": "sha256-XpCmZbyvE/BKcOnCWXOm+7y1UJbxlFoh0sFd//LjR2Q="
+      "BlazorGitHubPagesTucker.wasm": "sha256-NiPZ+BcqNZKyjroPfBN9osdkWcd5ITkDTX0joohCzIw="
     }
   },
   "cacheBootResources": true,
