@@ -1,0 +1,148 @@
+@page "/projects/DotnetEnvironmentProfiles"
+
+<PageTitle>Dotnet.EnvironmentProfiles</PageTitle>
+
+<div class="content">
+    <div>
+        <h1><b>Dotnet.EnvironmentProfiles</b></h1>
+        <p>
+            Dotnet.EnvironmentProfiles is a lightweight .NET library that adds deterministic, enterprise-friendly
+            environment mapping on top of ASP.NET Core without replacing any built-in primitives. It introduces
+            Environment Profiles, which map real-world SDLC environment names (QA, UAT, PreProd, and more) to the
+            canonical runtime behaviors that ASP.NET Core expects (Development, Staging, Production).
+        </p>
+        <p>
+            This keeps your actual environment names intact while ensuring application behavior (middleware, safety
+            checks, config loading) stays aligned with canonical .NET semantics.
+        </p>
+    </div>
+
+    <div>
+        <h2>Why It Exists</h2>
+        <p>ASP.NET Core recognizes only three canonical environment names:</p>
+        <ul>
+            <li>Development</li>
+            <li>Staging</li>
+            <li>Production</li>
+        </ul>
+        <p>
+            Enterprise teams rarely use just these. Common environment names include QA, UAT, CDE, PreProd, Perf,
+            and others. Those names are typically set via ASPNETCORE_ENVIRONMENT, but ASP.NET Core behavior still
+            depends on the canonical three.
+        </p>
+        <p>
+            Dotnet.EnvironmentProfiles bridges this gap without forcing you to rename environments or override
+            ASP.NET Core internals.
+        </p>
+    </div>
+
+    <div>
+        <h2>What It Does</h2>
+        <ul>
+            <li>Defines Environment Profiles as immutable, explicit objects that represent your real environment names.</li>
+            <li>Maps every environment name to a canonical runtime behavior.</li>
+            <li>Resolves environment names through a single source of truth (IEnvironmentProfileResolver).</li>
+            <li>Provides thin extension methods for convenience without embedding rules in application code.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Core Concepts</h2>
+        <h3>1) Environment Profile (Immutable)</h3>
+        <p>
+            A profile includes a Name (example: "QA") and a CanonicalEnvironment (Development, Staging, or Production).
+            Profiles are explicit and immutable, making them safe for audits and predictable in production.
+        </p>
+        <p><code>EnvironmentProfile("QA", CanonicalEnvironment.Staging)</code></p>
+
+        <h3>2) Default Profiles (Opinionated, Overridable)</h3>
+        <p>The package ships with sensible defaults that are easy to override via DI:</p>
+        <ul>
+            <li>Development -> Development</li>
+            <li>Local -> Development</li>
+            <li>Staging -> Staging</li>
+            <li>QA -> Staging</li>
+            <li>UAT -> Staging</li>
+            <li>CDE -> Staging</li>
+            <li>PreProd -> Staging</li>
+            <li>Production -> Production</li>
+        </ul>
+
+        <h3>3) Resolver (Single Source of Truth)</h3>
+        <p>All logic runs through <code>IEnvironmentProfileResolver</code>.</p>
+        <ul>
+            <li>Accept raw environment name (usually from ASPNETCORE_ENVIRONMENT).</li>
+            <li>Resolve to an EnvironmentProfile.</li>
+            <li>Fail fast or fallback deterministically for unknown values.</li>
+        </ul>
+
+        <h3>4) Thin Extensions (No Hidden Logic)</h3>
+        <p>Extensions exist only for convenience and always rely on the resolver:</p>
+        <ul>
+            <li>IsQa()</li>
+            <li>IsUat()</li>
+            <li>IsNonProduction()</li>
+            <li>GetEnvironmentProfile()</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Usage Flow</h2>
+        <ol>
+            <li>ASP.NET Core reads ASPNETCORE_ENVIRONMENT.</li>
+            <li>App registers Dotnet.EnvironmentProfiles.</li>
+            <li>Resolver maps name to profile.</li>
+            <li>App asks questions like "Is this non-prod?"</li>
+            <li>ASP.NET Core continues normally.</li>
+        </ol>
+    </div>
+
+    <div>
+        <h2>Example Usage</h2>
+        <pre><code>services.AddEnvironmentProfiles(options =>
+{
+    options.SetProfile(new EnvironmentProfile("Perf", CanonicalEnvironment.Staging));
+    options.UnknownEnvironmentBehavior = UnknownEnvironmentBehavior.UseFallbackCanonicalEnvironment;
+    options.FallbackCanonicalEnvironment = CanonicalEnvironment.Production;
+});
+
+var resolver = provider.GetRequiredService&lt;IEnvironmentProfileResolver&gt;();
+var profile = resolver.Resolve("QA");
+var isNonProd = profile.IsNonProduction();</code></pre>
+    </div>
+
+    <div>
+        <h2>Non-Goals (By Design)</h2>
+        <p>This library does not:</p>
+        <ul>
+            <li>Replace IHostEnvironment.</li>
+            <li>Change ASPNETCORE_ENVIRONMENT.</li>
+            <li>Introduce new ASP.NET Core lifecycles.</li>
+            <li>Override configuration loading behavior.</li>
+            <li>Infer environment names magically.</li>
+        </ul>
+        <p>It is designed to be deterministic, transparent, and safe for production.</p>
+    </div>
+
+    <div>
+        <h2>Where It Fits</h2>
+        <p>Works across:</p>
+        <ul>
+            <li>ASP.NET Core web apps</li>
+            <li>Worker services</li>
+            <li>Console apps</li>
+            <li>Functions and background services</li>
+            <li>Anything that uses environment names can use profiles</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Current Status</h2>
+        <ul>
+            <li>Pre-release (v0.2.0)</li>
+            <li>Stable core API</li>
+            <li>Tests and packaging in place</li>
+            <li>GitHub Actions workflow for NuGet publish</li>
+        </ul>
+    </div>
+</div>
