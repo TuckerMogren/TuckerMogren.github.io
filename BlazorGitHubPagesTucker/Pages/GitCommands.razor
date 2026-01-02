@@ -1,0 +1,123 @@
+@page "/tips-and-tricks/git-commands"
+
+<PageTitle>Git Commands</PageTitle>
+
+<div class="content">
+    <div>
+        <h1><b>Git Commands</b></h1>
+        <p>
+            A practical guide to common Git commands, what they do, and when to use them. This is written for
+            day-to-day workflows and quick troubleshooting.
+        </p>
+    </div>
+
+    <div>
+        <h2>Getting Started</h2>
+        <ul>
+            <li><b>git clone &lt;url&gt;</b> - copy a remote repo to your machine.</li>
+            <li><b>git init</b> - create a new repo in the current folder.</li>
+            <li><b>git status</b> - see what changed, staged, or untracked.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Daily Workflow</h2>
+        <ul>
+            <li><b>git add &lt;file&gt;</b> - stage file changes for commit.</li>
+            <li><b>git add -A</b> - stage all changes (new, modified, deleted).</li>
+            <li><b>git commit -m "message"</b> - save staged changes to history.</li>
+            <li><b>git log</b> - view commit history.</li>
+            <li><b>git diff</b> - view unstaged differences.</li>
+            <li><b>git diff --staged</b> - view staged differences.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Branches</h2>
+        <ul>
+            <li><b>git branch</b> - list branches.</li>
+            <li><b>git branch &lt;name&gt;</b> - create a new branch.</li>
+            <li><b>git switch &lt;name&gt;</b> - switch branches (preferred).</li>
+            <li><b>git checkout &lt;name&gt;</b> - switch branches (older syntax).</li>
+            <li><b>git merge &lt;branch&gt;</b> - merge a branch into the current one.</li>
+            <li><b>git rebase &lt;branch&gt;</b> - replay your commits on another branch for a linear history.</li>
+        </ul>
+        <p>
+            Tip: Use merge when you want a visible integration point; use rebase to keep a clean, linear history.
+        </p>
+    </div>
+
+    <div>
+        <h2>Remotes</h2>
+        <ul>
+            <li><b>git remote -v</b> - list configured remotes.</li>
+            <li><b>git fetch</b> - download remote changes without merging.</li>
+            <li><b>git pull</b> - fetch and merge (or rebase if configured).</li>
+            <li><b>git push</b> - upload your commits to the remote.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Inspecting Code</h2>
+        <ul>
+            <li><b>git show &lt;commit&gt;</b> - inspect a specific commit.</li>
+            <li><b>git log --oneline --graph --decorate</b> - compact, visual history.</li>
+            <li><b>git blame &lt;file&gt;</b> - see who changed each line and why.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Undo and Recovery</h2>
+        <ul>
+            <li><b>git restore &lt;file&gt;</b> - discard unstaged changes in a file.</li>
+            <li><b>git restore --staged &lt;file&gt;</b> - unstage a file.</li>
+            <li><b>git reset --soft HEAD~1</b> - undo last commit, keep changes staged.</li>
+            <li><b>git reset --mixed HEAD~1</b> - undo last commit, keep changes unstaged.</li>
+            <li><b>git reset --hard HEAD~1</b> - undo last commit and discard changes (use with care).</li>
+            <li><b>git revert &lt;commit&gt;</b> - create a new commit that undoes a previous one.</li>
+        </ul>
+        <p>
+            Tip: Use <b>revert</b> on shared branches. Use <b>reset</b> only on local work that has not been pushed.
+        </p>
+    </div>
+
+    <div>
+        <h2>Stashing</h2>
+        <ul>
+            <li><b>git stash</b> - temporarily shelve uncommitted changes.</li>
+            <li><b>git stash list</b> - list saved stashes.</li>
+            <li><b>git stash pop</b> - reapply and remove the latest stash.</li>
+            <li><b>git stash apply</b> - reapply a stash without removing it.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Tags and Releases</h2>
+        <ul>
+            <li><b>git tag</b> - list tags.</li>
+            <li><b>git tag v1.0.0</b> - create a lightweight tag.</li>
+            <li><b>git push origin v1.0.0</b> - push a tag to the remote.</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Advanced Tools</h2>
+        <ul>
+            <li><b>git cherry-pick &lt;commit&gt;</b> - apply a specific commit on top of your branch.</li>
+            <li><b>git rebase -i HEAD~N</b> - interactively edit, squash, or reorder commits.</li>
+            <li><b>git bisect</b> - binary search to find the commit that introduced a bug.</li>
+            <li><b>git clean -fd</b> - remove untracked files and folders (destructive).</li>
+        </ul>
+    </div>
+
+    <div>
+        <h2>Quick Scenarios</h2>
+        <ul>
+            <li><b>Before you start work</b>: git pull</li>
+            <li><b>New feature branch</b>: git switch -c feature/name</li>
+            <li><b>Amend last commit message</b>: git commit --amend</li>
+            <li><b>Undo a bad shared commit</b>: git revert &lt;commit&gt;</li>
+            <li><b>Sync with main using rebase</b>: git fetch, then git rebase origin/main</li>
+        </ul>
+    </div>
+</div>

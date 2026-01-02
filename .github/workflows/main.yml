@@ -3,7 +3,7 @@ name: Deploying Blazor WebAssembly to GitHub Pages
 # Run workflow on every push to the master branch
 on:
   push:
-    branches: [ main ]
+    branches: [ dev ] # I dont wanna deal with two merges...
     
 jobs:
   deploy-to-github-pages:
@@ -14,10 +14,10 @@ jobs:
           - uses: actions/checkout@v2
           
           # sets up .NET SDK 8
-          - name: Setup .NET Core SDK
-            uses: actions/setup-dotnet@v3
+          - name: Setup .NET SDK
+            uses: actions/setup-dotnet@v4
             with:
-              dotnet-version: 8.0.x        
+              dotnet-version: 8.0.x
                 
           # publishes Blazor project to the release-folder
           - name: Publish .NET Core Project

@@ -1,81 +1,108 @@
-﻿@page "/resume"
+@page "/resume"
 
 <PageTitle>Tucker's Resume</PageTitle>
 
 <div class="content">
     <div class="row">
         <div>
-            <p class>
+            <p>
                 <span class="fontSize25AndBlack"><b>Summary</b></span>
             </p>
             <p>
-            Tucker Mogren is currently a Software Engineer at Alliant Insurance Service and is an accomplished professional with a distinguished career in the insurance industry. 
-            A 2019 graduate of SUNY Polytechnic Institute and a 2015 graduate of Lake George Jr/Sr High School, Tucker has previously held positions at Utica National Insurance Group and IT Room Solutions. 
-            Tucker’s leadership extends beyond professional settings, as demonstrated by Tucker’s 2022 keynote address to the SUNY Polytechnic Institute Convocation class of 2026 and service as a Member of the SUNY Poly Alumni Committee since 2018, where Tucker also chairs the Nominations Subcommittee.
-            Since 2022, Tucker has also served as a Director on the Lake George Alumni Association Board.
+                Tucker Mogren is currently a Software Engineer at Alliant Insurance Services, focused on insurance platforms and cloud-hosted services.
+                A 2019 graduate of SUNY Polytechnic Institute and a 2015 graduate of Lake George Jr/Sr High School, Tucker has previously held roles at Utica National Insurance Group and IT Room Solutions.
+                Tucker's leadership extends beyond professional settings, including a 2022 keynote address to the SUNY Polytechnic Institute Convocation class of 2026 and service on the SUNY Poly Alumni Committee since 2018, where Tucker has chaired the committee since 2025.
+                Since 2022, Tucker has also served as a Director on the Lake George Alumni Association Board.
             </p>
         </div>
-        <div >
-            <p class>
+        <div>
+            <p>
                 <span class="fontSize25AndBlack"><b>Education</b></span>
             </p>
-            <span><b>SUNY Polytechnic Institute</b> - Utica, NY <br>Bachelor's Degree in Computer and Information Science <br>GPA: 3.49 (Grad: May 2019)</span><br><br>
-            <span><b>Lake George Jr/Sr High School</b> - Lake George, NY <br>Advanced Regents Diploma<br>GPA: 3.33 (Grad: June 2015)</span>
+            <span><b>SUNY Polytechnic Institute</b> - Utica, NY <br>Bachelor's Degree, Computer and Information Sciences, Minor in Computer Information Systems (2015 - 2019)</span><br><br>
+            <span><b>Lake George Jr/Sr High School</b> - Lake George, NY <br>High School, General Studies (2009 - 2015)</span>
         </div>
-        <div >
-            <p class>
-                <span class="fontSize25AndBlack"><b>Employment History</b></span>
-            </p>
+        <div>
             <p>
-                <span><b>Alliant Insurance Services</b>, Associate Application Developer (Oct 2022 - Present)<br></span>
+                <span class="fontSize25AndBlack"><b>Experience</b></span>
+            </p>
+            <div>
+                <span><b>Alliant Insurance Services</b>, Applications Developer (Apr 2025 - Present)<br></span>
                 <ul>
-                    <li>Operated as a C# developer within the Microsoft stack, utilizing Pulumi for modern infrastructure management.</li>
-                    <li>Successfully created a policy-binding service using Entity Framework, Adapter, Mediator, and Repository patterns. Integrated messaging features using Mass Transit and Azure Service Bus to enhance communication and service responsiveness.</li>
-                    <li>Leveraged Azure DevOps to deploy services to on-premises servers, ensuring smooth integration and streamlined management.</li>
-                    <li>Engineered a robust CI/CD pipeline tailored for deploying cloud-based services on Azure, employing Pulumi for Infrastructure as Code, thereby boosting deployment efficiency.</li>
-                    <li>Set up and maintained multi-stage environments (Dev, QA, UAT, Prod), along with establishing a hybrid connection to facilitate communication with on-premises services.</li>
-                    <li>Member of a team to build an integration with a third-party policy administration system into legacy systems/databases.</li>
+                    <li>Continuation of Associate Applications Developer responsibilities with expanded scope.</li>
+                </ul>
+                <span><b>Alliant Insurance Services</b>, Associate Applications Developer (Oct 2022 - Mar 2025)<br></span>
+                <ul>
+                    <li>Built C# services in the Microsoft stack and managed infrastructure with Pulumi.</li>
+                    <li>Created a policy-binding service using Entity Framework with Adapter, Mediator, and Repository patterns.</li>
+                    <li>Integrated messaging with MassTransit and Azure Service Bus.</li>
+                    <li>Deployed services to on-premises servers using Azure DevOps.</li>
+                    <li>Engineered CI/CD for cloud services on Azure and maintained Dev, QA, UAT, and Prod environments.</li>
+                    <li>Partnered on a two-person team to integrate the Instanda policy system into legacy databases.</li>
                 </ul>
                 <span><b>IT Room Solutions</b>, Software Engineer (Feb 2020 - Oct 2022)<br></span>
                 <ul>
-                    <li>Experience with Duck Creek Policy and Billing – Running on Duck Creek OnDemand (DCOD). </li>
-                    <li>Manage offshore resources and report their status to upper management. </li>
-                    <li>Created a script using SQL and XPath to automatically re-create the billing receivables for transactions that failed. </li>
-                    <li>Knowledgeable with the following Duck Creek Databases: ExampleData, ExampleIDO, ExampleIDORealTime.</li>
-                    <li>Developed microservices and state machines using C#, RabbitMQ, and Mass Transit (Automatonymous). </li>
-                    <li>Familar with the all aspects of the P & C Insurance Policy life cycle.</li>
-                    <li>Technologies used: XML, XSLT, XPath, XQuery, SQL, C#, SSMS, Azure DevOps, SQL Profiler</li>
+                    <li>Supported Duck Creek Policy and Billing on Duck Creek OnDemand (DCOD).</li>
+                    <li>Used Debugger, Trace Monitor, and SQL Profiler to troubleshoot production data errors.</li>
+                    <li>Managed offshore resources and delivered status updates to leadership.</li>
+                    <li>Built a SQL and XPath script to reconstruct billing receivables for failed transactions.</li>
+                    <li>Directed triage of data issues and opened ServiceNow incidents or problem tickets.</li>
+                    <li>Resolved Duck Creek shred issues using XSL and XSD.</li>
+                    <li>Created team training videos on SQL Profiler, Duck Creek Utility Center, and Duck Creek Author.</li>
+                    <li>Worked with ExampleData, ExampleIDO, and ExampleIDORealTime Duck Creek databases.</li>
+                    <li>Developed microservices and state machines using C#, RabbitMQ, and MassTransit (Automatonymous).</li>
                 </ul>
-                <span><b>Utica National Insurance Groiup</b>, Associate Software Engineer (May 2019 - Feb 2020)<br><br></span>
+                <span><b>Utica National Insurance Group</b>, Associate Software Developer (May 2019 - Feb 2020)<br></span>
                 <ul>
-                    <li>Developed and maintained Utica's instance of the Duck Creek Policy Administration System.</li>
-                    <li>Utilized Data Tester, Trace Monitor, TSV Debugger, and Example Util to aid in the triage of production bugs.</li>
-                    <li>Technologies used: XML, SQL, C#, SSMS, Micro Focus Dimensions CM (repo)</li>
-                    <li>I also was an IT Intern from Nov 2016-Aug 2017 and then again from May-Aug 2018.</li>
+                    <li>Developed and maintained the Duck Creek Policy Administration System.</li>
+                    <li>Collaborated with on-shore and off-shore developers to deliver policy services.</li>
+                    <li>Managed and resolved production issues across multiple severity levels.</li>
+                    <li>Used Data Tester, Trace Monitor, TSV Debugger, and Example Util to triage bugs.</li>
+                    <li>Conducted root cause analysis and documented prevention recommendations.</li>
+                    <li>Used SQL Server Management Studio stored procedures to transition policies for unit testing.</li>
+                    <li>Previously served as an IT Intern from Nov 2016-Aug 2017 and May-Aug 2018.</li>
                 </ul>
-                <span><b>Student Government at Utica, SUNY Polytechnic Instiute</b>, President (April 2018 - April 2019)<br><br></span>
-                <ul>
-                    <li>Assisted with the implantation and re-launch of SUNY Poly Engage. An Engage and finanical tracking tool by Campus Labs.</li>
-                    <li>Created a Director of Diversity and Inclusion to promote internal and external Diversity initiatives.</li>
-                    <li>Member, SUNY Student Assembly ad-hoc committee for a board-based fee. Proposal was passed!</li>
-                    <li>Worked with the Provost’s office to get the SUNY Poly academic honor list publicly posted on the website. </li>
-                    <li>Directly supervised three directors (Development, Public Relations, Diversity-Equality-Inclusion) to aid in operations of the student government.</li>
-                </ul>
+            </div>
+        </div>
+        <div>
+            <p>
+                <span class="fontSize25AndBlack"><b>Leadership</b></span>
             </p>
+            <div>
+                <span><b>Student Government at Utica, SUNY Polytechnic Institute</b>, President (Apr 2018 - Apr 2019)<br></span>
+                <ul>
+                    <li>Chaired executive board and cabinet meetings to ensure effective operations and decision-making.</li>
+                    <li>Introduced a Director of Diversity and Inclusion to promote inclusive initiatives.</li>
+                    <li>Contributed to the launch of SUNY Poly Engage, expanding outreach.</li>
+                    <li>Advocated for a board-based fee proposal at the SUNY Student Assembly.</li>
+                    <li>Worked with the Provost's office to publicize the SUNY Poly academic honor list.</li>
+                    <li>Pioneered a digital financial tracking system to improve budgeting and purchases.</li>
+                    <li>Supervised directors and represented student interests across campus leadership.</li>
+                </ul>
+                <span><b>Genesis Yearbook</b>, Senior Editor (Aug 2017 - May 2018)<br></span>
+                <span><b>Genesis Yearbook</b>, Junior Editor (Aug 2016 - Aug 2017)<br></span>
+                <span><b>Genesis Yearbook</b>, Photographer (Sep 2015 - Aug 2016)<br></span>
+            </div>
         </div>
         <div>
             <p>
                 <span class="fontSize25AndBlack"><b>Skills</b></span>
             </p>
+            <p><b>Top Skills</b></p>
+            <ul>
+                <li>Microservices</li>
+                <li>C#</li>
+                <li>.NET Core</li>
+            </ul>
             <p><b>Azure</b></p>
             <ul>
-                <li>Experience with Logic Apps, App Service, Cosmos Dbs, Service Bus, etc </li>
+                <li>Experience with Logic Apps, App Service, Cosmos DB, and Service Bus.</li>
                 <li>Implemented multi-stage environments with Azure DevOps.</li>
             </ul>
             <p><b>OIDC and Identity Providers</b></p>
             <ul>
                 <li>Implemented Okta for API authentication, including integration with other services.</li>
-                <li>Utilized Keycloak for local authentication</li>
+                <li>Utilized Keycloak for local authentication.</li>
             </ul>
             <p><b>Architecture Patterns</b></p>
             <ul>
@@ -86,8 +113,8 @@
             </ul>
             <p><b>Development Tools & Languages</b></p>
             <ul>
-                <li>Proficient .Net.</li>
-                <li>Experience with Visual Studio, Git, CI/CD pipelines(Github workflows, Azure pipelines), Pulumi (IaC).</li>
+                <li>Proficient in C# and .NET Core.</li>
+                <li>Experience with Visual Studio, Git, CI/CD pipelines (GitHub workflows, Azure pipelines), Pulumi (IaC).</li>
             </ul>
             <p><b>DevOps & Automation</b></p>
             <ul>
@@ -101,7 +128,7 @@
             </ul>
             <p><b>Project Management & Collaboration</b></p>
             <ul>
-                <li>Experience with Agile, Scrum methodologies.</li>
+                <li>Experience with Agile and Scrum methodologies.</li>
                 <li>Collaborated with cross-functional teams, ensuring effective communication and project success.</li>
             </ul>
         </div>
@@ -109,38 +136,37 @@
             <p>
                 <span class="fontSize25AndBlack"><b>Certifications</b></span>
             </p>
-            <p>Dell Boomi Professional Developer, Aquired in March of 2020 and renewed in March 2022</p>
-            <p>Dell Boomi Professional Flow Certification, Aquired in November of 2020</p>
-            <p>Duck Creek Technologies Basic Author, Aquired in July 2019</p>
+            <p>Basic Author - Mastery Level</p>
+            <p>Dell Boomi Professional Developer (2020, 2022)</p>
+            <p>Dell Boomi Flow Professional Developer (2020)</p>
         </div>
         <div>
             <p>
                 <span class="fontSize25AndBlack"><b>Awards/Honors</b></span>
             </p>
-            <p>Student Government President of the Year for Doctoral Granting Insitutions, SUNY Student Assembly - April 2019</p>
-            <p>Student Life Award, SUNY Polytechnic Insutite - April 2019</p>
+            <p>SUNY Student Assembly Student Government President of the Year - Doctoral Granting Institution - April 2019</p>
+            <p>Student Life Award, SUNY Polytechnic Institute - April 2019</p>
         </div>
         <div>
             <p>
-                <span class="fontSize25AndBlack"><b>Public Speaking Engagements</b></span>
+                <span class="fontSize25AndBlack"><b>Publications</b></span>
             </p>
-            <p>Keynote Speaker, Convocation at SUNY Poly - August 2022</p>
-            <p>Speaker, Round Table with Past Presidents Hosted By SUNY Poly Student Government at Utica - Feb 2022</p>
+            <p>Fighting Food Insecurity on our Campus: Poly Pantry</p>
+            <p>Relay for Life at SUNY Poly - March 31 - April 1</p>
         </div>
         <div>
             <p>
                 <span class="fontSize25AndBlack"><b>Board/Committee Appointments</b></span>
             </p>
-            <p>Lake George High School Alumni Association, Director - April 2022 to Present</p>
+            <p>Lake George Alumni Association Board, Director - April 2022 to Present</p>
             <ul>
-                <li>Secretary - April 2024 to Present</li>
-                <li>In charge of all external written communications, including but not limited to press releases, public statements, email blasts, and maintaining the alumni association website (WordPress)</li>
+                <li>Secretary - April 2024 to Present - Oversees external communications, including press releases, public statements, email blasts, and the alumni association website (WordPress).</li>
             </ul>
             <p>SUNY Polytechnic Institute Alumni Committee, Member - August 2018 to Present</p>
             <ul>
-                <li>Chair of the Nomination Subcommittee - April 2023 to Present</li>
+                <li>Chair of the Nomination Subcommittee - April 2023 to August 2025 - Led the nomination process to identify alumni ambassadors and committee members who support engagement initiatives and events.</li>
+                <li>Chair - August 2025 to Present - Leads the advisory committee supporting the SUNY Poly Foundation Board by coordinating regional and on-campus events, strengthening alumni-student connections, and advancing alumni engagement.</li>
             </ul>
-            <p>SUNY Polytechnic Institute Auxiliary Services Board, Student Director - April 2018 to April 2019</p>
         </div>
     </div>
 </div>
